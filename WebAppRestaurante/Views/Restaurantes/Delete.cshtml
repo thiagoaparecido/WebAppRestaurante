@@ -1,0 +1,36 @@
+﻿@model WebAppRestaurante.Models.Restaurante
+
+@{
+    ViewBag.Title = "Excluir Restaurante";
+}
+
+<h4>Excluir Restaurante</h4>
+
+<h5>Tem certeza que deseja excluir este Restaurante ?</h5>
+<div class="form-horizontal">
+    <div>
+        <hr />
+        <dl >
+            <dt>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Descricao)
+            </dd>
+
+        </dl>
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-group">
+                <div class="col-md-10">
+                    <a href="/Restaurantes" class="btn btn-default btn-sm">Cancelar</a>
+                    <input type="submit" value="Excluir" class="btn btn-danger btn-sm" />
+                </div>
+            </div>
+        }
+    </div>
+</div>

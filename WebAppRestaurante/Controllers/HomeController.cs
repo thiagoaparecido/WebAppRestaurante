@@ -15,14 +15,14 @@ namespace WebAppRestaurante.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Sistema de Restaurantes.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Contatos.";
 
             return View();
         }

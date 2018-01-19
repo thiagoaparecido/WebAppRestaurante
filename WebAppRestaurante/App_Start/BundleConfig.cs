@@ -11,6 +11,9 @@ namespace WebAppRestaurante
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/jquery-format").Include(
+                        "~/Scripts/jquery.mask.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
@@ -24,6 +27,7 @@ namespace WebAppRestaurante
                       "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
+                      "~/Content/font-awesome.min.css",
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }

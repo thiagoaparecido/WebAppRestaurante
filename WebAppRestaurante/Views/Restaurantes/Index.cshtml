@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebAppRestaurante.Models.Restaurante>
+
+@{
+    ViewBag.Title = "Restaurantes";
+}
+
+<h2>Restaurantes</h2>
+
+@using (Html.BeginForm("Index", "Restaurantes", FormMethod.Post, htmlAttributes: new { id = "frmPesq" }))
+{
+    <table class="table">
+        <tr>
+            <th style="text-align:left">
+                Nome:
+            </th>
+        </tr>
+        <tr>
+            <th style="text-align:left">
+                @Html.TextBox("SearchString", ViewBag.SearchString as string, htmlAttributes: new { @class = "control-label", placeholder = "Digite para pesquisar", autocomplete = "on" })
+            </th>
+        </tr>
+        <tr>
+            <th style="text-align:left">
+                <a href="#" class="btn btn-info btn-sm" onclick="$('#frmPesq').submit();"><i class="fa fa-search" aria-hidden="true"></i>&nbsp; Pesquisar</a>
+
+                <a href="/Restaurantes/Create" class="btn btn-success btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> Novo Restaurante</a>
+            </th>
+        </tr>
+    </table>
+}
+<table class="table table-striped table-bordered">
+    <tr>
+        <th style="width:50px"></th>
+        <th style="width:50px"></th>
+        <th>Restaurantes</th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td style="text-align:center">
+            <a href="/Restaurantes/Delete/@item.RestauranteID" style="color:red"><i class="fa fa-trash" aria-hidden="true"></i></a>
+        </td>
+        <td style="text-align:center">
+            <a href="/Restaurantes/Edit/@item.RestauranteID" style="color:blue"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Descricao)
+        </td>
+
+    </tr>
+}
+
+</table>
