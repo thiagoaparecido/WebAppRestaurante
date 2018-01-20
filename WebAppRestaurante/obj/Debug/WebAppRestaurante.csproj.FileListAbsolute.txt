@@ -1,5 +1,4 @@
 C:\Users\Thiago\Documents\Visual Studio 2015\Projects\Case2\WebAppRestaurante\WebAppRestaurante\obj\Debug\WebAppRestaurante.csprojResolveAssemblyReference.cache
-C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRestaurante\obj\Debug\WebAppRestaurante.csprojResolveAssemblyReference.cache
 C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRestaurante\bin\ApplicationInsights.config
 C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRestaurante\bin\roslyn\csc.exe
 C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRestaurante\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -56,3 +55,4 @@ C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRes
 C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRestaurante\bin\Newtonsoft.Json.xml
 C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRestaurante\obj\Debug\WebAppRestaurante.dll
 C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRestaurante\obj\Debug\WebAppRestaurante.pdb
+C:\Users\thiag\Documents\Visual Studio 2015\Projects\WebAppRestaurante\WebAppRestaurante\obj\Debug\WebAppRestaurante.csprojResolveAssemblyReference.cache

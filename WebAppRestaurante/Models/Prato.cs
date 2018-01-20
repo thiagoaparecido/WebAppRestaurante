@@ -12,7 +12,6 @@ namespace WebAppRestaurante.Models
         public int PratoID { get; set; }
         public string Descricao { get; set; }
 
-        //[DisplayFormat(DataFormatString = "{0:#.####}")]
         public double Preco { get; set; }
 
         public int RestauranteID { get; set; }

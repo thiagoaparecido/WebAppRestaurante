@@ -29,21 +29,6 @@ namespace WebAppRestaurante.Controllers
             return View(listaRestaurante);
         }
 
-        // GET: Restaurantes/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Restaurante restaurante = db.Restaurantes.Find(id);
-            if (restaurante == null)
-            {
-                return HttpNotFound();
-            }
-            return View(restaurante);
-        }
-
         // GET: Restaurantes/Create
         public ActionResult Create()
         {

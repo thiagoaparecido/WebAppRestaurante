@@ -22,21 +22,6 @@ namespace WebAppRestaurante.Controllers
             return View(pratos.ToList());
         }
 
-        // GET: Pratos/Details/5
-        public ActionResult Details(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            Prato prato = db.Pratos.Find(id);
-            if (prato == null)
-            {
-                return HttpNotFound();
-            }
-            return View(prato);
-        }
-
         // GET: Pratos/Create
         public ActionResult Create()
         {

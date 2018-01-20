@@ -1,18 +1,15 @@
 ﻿@model IEnumerable<WebAppRestaurante.Models.Prato>
-
-@{
-//Cultures culturePtBr = new Cultures();
-}
-
+@using System.Globalization;
+@using System.Threading;
 <h2>Pratos</h2>
 
 <p>
-    <a href="/Pratos/Create" class="btn btn-success btn-sm"><span class="glyphicon-plus"></span>&nbsp; Cadastrar Novo Prato</a>
+    <a href="/Pratos/Create" class="btn btn-success btn-sm"><i class="fa fa-plus" aria-hidden="true"></i> Cadastrar Novo Prato</a>
 </p>
 <table class="table table-striped table-bordered">
     <tr>
-        <th></th>
-        <th></th>
+        <th style="width:50px"></th>
+        <th style="width:50px"></th>
         <th>
             Restaurante
         </th>
@@ -20,17 +17,17 @@
             Prato
         </th>
         <th>
-            Preço
+            Preço (R$)
         </th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-        <td>
-            @Html.ActionLink("Excluir", "Delete", new { id = item.PratoID })
+        <td style="text-align:center">
+            <a href="/Pratos/Delete/@item.PratoID" style="color:red"><i class="fa fa-trash" aria-hidden="true"></i></a>
         </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id = item.PratoID })
+        <td style="text-align:center">
+            <a href="/Pratos/Edit/@item.PratoID" style="color:blue"><i class="fa fa-pencil" aria-hidden="true"></i></a>
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Restaurante.Descricao)
@@ -48,20 +45,19 @@
                 }
                 else
                 {
-
                     if (preco.Length < 3)
                     {
-                        preco = preco + "00";
+                        preco = preco + ",00";
                     }
                     else
                     {
-
                         preco = preco.Substring(0, (preco.Length - 2)) + "," +  preco.Substring((preco.Length - 2), 2);
-
-                        preco = String.Format("{0:#,00}", preco);
-
                     }
                 }
+
+                double dblPreco = Convert.ToDouble(preco);
+                CultureInfo ci = new CultureInfo("pt-br");
+                preco = dblPreco.ToString("C", ci);
             }
             @preco
         </td>
